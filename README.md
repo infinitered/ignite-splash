@@ -1,10 +1,15 @@
-# My Plugin
+# Ignite Splash
 
-This is where you would put an intro to your plugin, and maybe a few examples of usage. 
+This plugin adds a splash screen to a React Native project via [Ignite CLI](https://github.com/infinitered/ignite).
 
 ## Example
 
-```js
-console.log("Hello World")
+```
+$ ignite add splash
 ```
 
+## License
+
+Copyright 2018-present Infinite Red, Inc.
+
+Licensed under the MIT.
