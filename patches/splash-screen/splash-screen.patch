@@ -22,23 +22,28 @@ diff --git a/android/app/src/main/java/com/SplashScreenPatch/MainActivity.java b
 index 7964134..89d24a5 100644
 --- a/android/app/src/main/java/com/SplashScreenPatch/MainActivity.java
 +++ b/android/app/src/main/java/com/SplashScreenPatch/MainActivity.java
-@@ -2,8 +2,16 @@
+@@ -1,6 +1,8 @@
+ package com.testignite;
 
 +import android.os.Bundle;
  import com.facebook.react.ReactActivity;
 +import org.devio.rn.splashscreen.SplashScreen;
 
+       import com.facebook.react.ReactActivityDelegate;
+       import com.facebook.react.ReactRootView;
+@@ -8,6 +10,12 @@ import com.facebook.react.ReactActivity;
+
  public class MainActivity extends ReactActivity {
 
-+   @Override
-+    protected void onCreate(Bundle savedInstanceState) {
-+        SplashScreen.show(this);
-+        super.onCreate(savedInstanceState);
-+    }
++  @Override
++  protected void onCreate(Bundle savedInstanceState) {
++    SplashScreen.show(this);
++    super.onCreate(savedInstanceState);
++  }
 +
-     /**
-      * Returns the name of the main component registered from JavaScript.
-      * This is used to schedule rendering of the component.
+   @Override
+   protected ReactActivityDelegate createReactActivityDelegate() {
+     return new ReactActivityDelegate(this, getMainComponentName()) {
 diff --git a/android/app/src/main/res/drawable-hdpi/launch_screen.png b/android/app/src/main/res/drawable-hdpi/launch_screen.png
 new file mode 100755
 index 0000000000000000000000000000000000000000..5e3f526424674c018d88576b0da021c01e8f24df
